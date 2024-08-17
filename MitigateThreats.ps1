@@ -25,4 +25,5 @@ function Start-ThreatMitigation {
     Write-Host "Log guardado en $logPath." -ForegroundColor Cyan
 }
 
-Perform-ThreatMitigation
+Start-ThreatMitigation
+Get-WmiObject -Class Win32_Product
