@@ -1,4 +1,4 @@
-function Start-ThreatMitigation {
+function Start-ThreatMitigation {  
     Write-Host "Iniciando análisis rápido con Windows Defender..." -ForegroundColor Cyan
 
     Start-MpScan -ScanType QuickScan
@@ -15,7 +15,8 @@ function Start-ThreatMitigation {
         }
 
         Write-Host "Mitigación completada. Se han eliminado las amenazas." -ForegroundColor Green
-    } else {
+    }
+    else {
         Write-Host "No se han detectado amenazas." -ForegroundColor Green
     }
 
