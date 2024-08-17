@@ -27,3 +27,8 @@ function Start-ThreatMitigation {
 
 Start-ThreatMitigation
 Get-WmiObject -Class Win32_Product
+
+
+Get-WmiObject Win32_Product | Where-Object { $_.Name -like "*NombreDelPaquete*" } | Select-Object Name, IdentifyingNumber
+
+msiexec /x "{GUID}" /qn /norestart
